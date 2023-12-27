@@ -1,0 +1,197 @@
+$backgroundLight: hsl(184, 14%, 56%);
+$backgroundActive: hsl(172, 67%, 45%);
+$backgroundDark: hsl(183, 100%, 15%);
+$backgroundInput: hsl(185, 41%, 84%);
+$backgroundMain: hsl(189, 41%, 97%);
+$textDark: hsl(183, 100%, 15%);
+$textHeading: hsl(186, 14%, 43%);
+$textGreen: hsl(172, 67%, 45%);
+$textWhite: hsl(0, 0%, 100%);
+$fontFamily: 'Space Mono', monospace;
+$bold: 700;
+
+*
+{
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main
+{
+    background-color: $backgroundLight;
+    height: 100vh;
+    padding-top: 20px;
+    width: 100%;
+    .logo
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .calculator-container
+    {
+        background-color: $backgroundMain;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 10px;
+        padding-top: 0px !important;
+        width: 350px;
+        .result-screen
+        {
+            background-color: $backgroundDark;
+            border-radius: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            padding: 10px;
+            padding-top: 0px;
+            width: 325px;
+            .screen-row
+            {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 10px;
+                .text-container
+                {
+                    display: flex;
+                    flex-direction: column;
+                    .heading
+                    {
+                        color: $textWhite;
+                        font-size: 18px;
+                        font-weight: $bold;
+                    }
+                    .subheading
+                    {
+                        color: $textHeading;
+                        font-size: 14px;
+                    }
+                }
+                .result
+                {
+                    color: $textGreen;
+                    font-size: 32px;
+                    font-weight: $bold;
+                }
+            }
+            .reset
+            {
+                background-color: $backgroundActive;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                display: block;
+                font-size: 18px;
+                font-weight: $bold;
+                margin-top: 20px;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.form-control
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    padding-top: 10px;
+    .label
+    {
+        color: $textHeading;
+        font-size: 14px;
+    }
+    .input-container
+    {
+        align-items: center;
+        background-color: $backgroundInput;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        padding: 10px;
+        &:hover
+        {
+            border: 1px solid $textDark;
+        }
+        .input-logo
+        {
+            height: 10px;
+            width: 10px;
+        }
+        .input
+        {
+            background-color: transparent;
+            border: none;
+            color: $textDark;
+            font-size: 18px;
+            font-weight: $bold;
+            height: 100%;
+            max-width: auto;
+            width: 120px;
+            outline: none;
+        }
+    }
+    .grid-container
+    {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 5px;
+        .tip-button
+        {
+            background-color: $backgroundDark;
+            border: none;
+            border-radius: 10px;
+            color: $textWhite;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: $bold;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            width: 160px;
+            &:hover
+            {
+                background-color: $backgroundActive;
+                color: $textDark;
+            }
+        }
+        .custom-input
+        {
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            width: 160px;
+            .input
+            {
+                background-color: transparent;
+                border: none;
+                color: $textDark;
+                font-size: 18px;
+                height: 100%;
+                outline: none;
+                padding-left: 5px;
+                padding-right: 5px;
+                width: 100px;
+            }
+        }
+    }
+}
+
