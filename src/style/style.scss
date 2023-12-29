@@ -110,10 +110,21 @@ body
     flex-direction: column;
     max-width: 325px;
     padding-top: 10px;
-    .label
+    .error-control
     {
-        color: $textHeading;
-        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        .label
+        {
+            color: $textHeading;
+            font-size: 14px;
+        }
+        .error-label
+        {
+            color:  lightcoral;
+            font-size: 14px;
+            margin-top: 2.5px;
+        }
     }
     .input-container
     {
@@ -194,4 +205,37 @@ body
         }
     }
 }
+
+@media only screen and (min-width: 1024px) 
+{
+
+    .main
+    {
+        .calculator-container
+        {
+            align-items: center;
+            display: flex;
+            width: 900px;
+            .left-container
+            {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                padding-right: 50px;
+                width: 450px;
+            }
+            .right-container
+            {
+                width: 450px;
+            }
+        }
+    } 
+
+    .form-control
+    {
+        width: 350px;
+    }
+}
+  
 
